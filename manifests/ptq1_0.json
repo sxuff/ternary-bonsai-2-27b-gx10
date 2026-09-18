@@ -1,0 +1,17 @@
+{
+  "name": "Ternary-Bonsai-2-27B-PTQ1_0",
+  "filename": "Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+  "size_gb": 5.53,
+  "bpw": 1.75,
+  "format": "PTQ1_0",
+  "source": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+  "sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "quality": {
+    "benchmarks_avg": 84.78,
+    "pct_fp16": 98.2
+  },
+  "benchmark": {
+    "pp512": 454.6,
+    "tg128": 34.21
+  }
+}

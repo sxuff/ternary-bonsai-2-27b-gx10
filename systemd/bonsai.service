@@ -1,0 +1,23 @@
+[Unit]
+Description=Ternary-Bonsai-2-27B PQ2_0 llama-server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/sxuf/src/llama-bonsai-prism/build-gb10/bin/llama-server \
+  -m /home/sxuf/models/Ternary-Bonsai-2-27B-PQ2_0/Ternary-Bonsai-2-27B-PQ2_0.gguf \
+  -ngl 99 -fa on -c 262144 -np 1 -ub 2048 --no-mmap \
+  --jinja --ctx-checkpoints 32 --cache-ram 32768 \
+  --reasoning-budget 8192 \
+  --temp 1.0 --top-p 0.95 --top-k 20 --min-p 0 \
+  --host 127.0.0.1 --port 8001 \
+  --metrics --slots \
+  -a Ternary-Bonsai-2-PQ2_0
+WorkingDirectory=/home/sxuf/logs
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/home/sxuf/logs/bonsai.log
+StandardError=inherit
+
+[Install]
+WantedBy=default.target

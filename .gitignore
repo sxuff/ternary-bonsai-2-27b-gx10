@@ -1,0 +1,5 @@
+*.log
+*.tmp
+analyze_card.py
+results/region_*.png
+results/*-cropped.png
