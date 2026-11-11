@@ -1,5 +1,13 @@
 # Ternary-Bonsai-2-27B on one DGX Spark (GB10)
 
+## Run it
+
+```bash
+git clone https://github.com/sxuff/ternary-bonsai-2-27b-gx10 && cd ternary-bonsai-2-27b-gx10 && ./run.sh
+```
+
+Expected: **34.21 tok/s** llama-bench tg128 (5 reps, full offload, flash attn) — receipt: [`manifests/ptq1_0.json`](manifests/ptq1_0.json)
+
 Verified recipe for serving `prism-ml/Ternary-Bonsai-2-27B-gguf` on one NVIDIA GB10 (128 GB unified memory) with the PrismML llama.cpp fork.
 
 ## Verified stack
